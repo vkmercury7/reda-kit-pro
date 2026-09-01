@@ -13,15 +13,15 @@ export function StickyBar() {
     const update = () => setVisible(pastHero && !offerVisible);
 
     const heroObs = new IntersectionObserver(
-      ([e]) => {
-        pastHero = !e.isIntersecting;
+      (entries) => {
+        pastHero = !entries[0]?.isIntersecting;
         update();
       },
       { threshold: 0 },
     );
     const offerObs = new IntersectionObserver(
-      ([e]) => {
-        offerVisible = e.isIntersecting;
+      (entries) => {
+        offerVisible = !!entries[0]?.isIntersecting;
         update();
       },
       { threshold: 0.15 },
