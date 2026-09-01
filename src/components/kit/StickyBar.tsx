@@ -51,7 +51,7 @@ export function StickyBar() {
           <p className="font-display text-base font-extrabold leading-tight text-navy">R$ 19,90</p>
         </div>
         <a
-          href="#oferta"
+          href="https://pay.kirvano.com/df102b63-3564-4381-80d5-30e2ecf7eb6c"
           className="shrink-0 rounded-lg bg-brand px-4 py-3 font-display text-xs font-bold uppercase tracking-tight text-primary-foreground"
         >
           Quero acessar
