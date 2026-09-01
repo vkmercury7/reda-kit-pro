@@ -1,24 +1,51 @@
 import { createFileRoute } from "@tanstack/react-router";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
+import { Hero } from "@/components/kit/Hero";
+import { Pain } from "@/components/kit/Pain";
+import { Toolbox } from "@/components/kit/Toolbox";
+import { Inside } from "@/components/kit/Inside";
+import { Mechanism } from "@/components/kit/Mechanism";
+import { Transform } from "@/components/kit/Transform";
+import { ForWho } from "@/components/kit/ForWho";
+import { Feedbacks } from "@/components/kit/Feedbacks";
+import { Offer } from "@/components/kit/Offer";
+import { Faq } from "@/components/kit/Faq";
+import { FinalCta } from "@/components/kit/FinalCta";
+import { StickyBar } from "@/components/kit/StickyBar";
+
+const title = "Kit Redação Nota 1000 | Estruturas, exemplos e mapas mentais";
+const description =
+  "Redações prontas para estudar, estruturas, ideias, argumentos, conectivos e mapas mentais para você saber o que escrever na redação do ENEM e vestibulares. R$ 19,90.";
+
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title },
+      { name: "description", content: description },
+      { property: "og:title", content: title },
+      { property: "og:description", content: description },
+      { property: "og:type", content: "product" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
+    <main className="pb-20 md:pb-0">
+      <Hero />
+      <Pain />
+      <Toolbox />
+      <Inside />
+      <Mechanism />
+      <Transform />
+      <ForWho />
+      <Feedbacks />
+      <Offer />
+      <Faq />
+      <FinalCta />
+      <StickyBar />
+    </main>
   );
 }
