@@ -1,17 +1,16 @@
 import { MessageSquare } from "lucide-react";
 import { Section, Eyebrow } from "./ui";
 import { SnapCarousel } from "./SnapCarousel";
+import feedback01 from "@/assets/feedback-01.jpg.asset.json";
+import feedback02 from "@/assets/feedback-02.jpg.asset.json";
 
 /**
- * Placeholders de feedback.
- * Para publicar prints reais, basta preencher `src` com a imagem
- * (ex.: import print1 from "@/assets/feedback-01.png").
+ * Prints reais de feedback dos estudantes.
  * O print é exibido inteiro (object-contain), sem cortes.
  */
 const feedbacks: { label: string; src?: string }[] = [
-  { label: "Feedback 01" },
-  { label: "Feedback 02" },
-  { label: "Feedback 03" },
+  { label: "Feedback 01", src: feedback01.url },
+  { label: "Feedback 02", src: feedback02.url },
 ];
 
 function Slot({ label, src }: { label: string; src?: string }) {
