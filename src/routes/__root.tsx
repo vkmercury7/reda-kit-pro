@@ -129,6 +129,15 @@ function RootShell({ children }: { children: ReactNode }) {
       </head>
       <body>
         {children}
+        <noscript>
+          <img
+            height="1"
+            width="1"
+            style={{ display: "none" }}
+            src={`https://www.facebook.com/tr?id=${META_PIXEL_ID}&ev=PageView&noscript=1`}
+            alt=""
+          />
+        </noscript>
         <Scripts />
       </body>
     </html>
@@ -137,6 +146,21 @@ function RootShell({ children }: { children: ReactNode }) {
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
+  const router = useRouter();
+  const isFirstLoad = useRef(true);
+
+  // SPA navigation PageViews — the base snippet already fired PageView for
+  // the initial page load, so skip the first resolved navigation.
+  useEffect(() => {
+    const unsubscribe = router.subscribe("onResolved", () => {
+      if (isFirstLoad.current) {
+        isFirstLoad.current = false;
+        return;
+      }
+      trackPageView();
+    });
+    return unsubscribe;
+  }, [router]);
 
   return (
     <QueryClientProvider client={queryClient}>

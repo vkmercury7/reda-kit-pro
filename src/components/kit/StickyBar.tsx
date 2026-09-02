@@ -53,6 +53,7 @@ export function StickyBar() {
         </div>
         <a
           href="https://pay.kirvano.com/df102b63-3564-4381-80d5-30e2ecf7eb6c"
+          onClick={trackInitiateCheckout}
           className="shrink-0 rounded-lg bg-brand px-4 py-3 font-display text-xs font-bold uppercase tracking-tight text-primary-foreground"
         >
           Quero acessar
