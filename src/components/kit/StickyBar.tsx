@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
+import { trackInitiateCheckout } from "@/lib/meta-pixel";
 
 export function StickyBar() {
   const [visible, setVisible] = useState(false);

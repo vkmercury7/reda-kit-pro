@@ -1,6 +1,7 @@
 import type { ReactNode } from "react";
 import { ArrowDown, Check } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { trackInitiateCheckout } from "@/lib/meta-pixel";
 
 export function Cta({
   children,
