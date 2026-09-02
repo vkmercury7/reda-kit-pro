@@ -1,6 +1,7 @@
 import type { ReactNode } from "react";
 import { ArrowDown, Check } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { trackInitiateCheckout } from "@/lib/meta-pixel";
 
 export function Cta({
   children,
@@ -14,6 +15,7 @@ export function Cta({
   return (
     <a
       href="https://pay.kirvano.com/df102b63-3564-4381-80d5-30e2ecf7eb6c"
+      onClick={trackInitiateCheckout}
       className={cn(
         "group inline-flex w-full items-center justify-center gap-2 rounded-xl bg-brand text-center font-display font-bold tracking-tight text-primary-foreground shadow-[var(--shadow-lift)] transition-all duration-200 hover:-translate-y-0.5 hover:brightness-110 active:translate-y-0 sm:w-auto",
         size === "xl" ? "px-8 py-5 text-base sm:text-lg" : "px-7 py-4 text-sm sm:text-base",
