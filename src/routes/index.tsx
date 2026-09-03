@@ -37,6 +37,7 @@ function Index() {
     <main className="pb-20 md:pb-0">
       <Hero />
       <Pain />
+      <MaterialInside />
       <Toolbox />
       <Inside />
       <Mechanism />
