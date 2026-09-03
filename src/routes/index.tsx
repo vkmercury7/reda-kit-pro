@@ -37,10 +37,11 @@ function Index() {
       <Pain />
       <MaterialInside />
       <Toolbox />
-      <Mechanism />
       <ForWho />
       <Feedbacks />
       <Offer />
+      <Mechanism />
+
       <Faq />
       <FinalCta />
       <StickyBar />
