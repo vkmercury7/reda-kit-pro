@@ -108,7 +108,7 @@ export function MaterialInside() {
         onPointerCancel={endDrag}
         style={{ cursor: "grab", touchAction: "pan-y" }}
       >
-        <div ref={trackRef} className="flex w-max gap-[18px] will-change-transform sm:gap-6">
+        <div ref={trackRef} className="flex w-max will-change-transform">
           {[0, 1].map((copy) => (
             <div key={copy} className="flex shrink-0 gap-[18px] sm:gap-6" aria-hidden={copy === 1}>
               <div className="w-5 shrink-0 md:w-8" />
