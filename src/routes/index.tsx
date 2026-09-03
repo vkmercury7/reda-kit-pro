@@ -4,9 +4,7 @@ import { Hero } from "@/components/kit/Hero";
 import { Pain } from "@/components/kit/Pain";
 import { MaterialInside } from "@/components/kit/MaterialInside";
 import { Toolbox } from "@/components/kit/Toolbox";
-import { Inside } from "@/components/kit/Inside";
 import { Mechanism } from "@/components/kit/Mechanism";
-import { Transform } from "@/components/kit/Transform";
 import { ForWho } from "@/components/kit/ForWho";
 import { Feedbacks } from "@/components/kit/Feedbacks";
 import { Offer } from "@/components/kit/Offer";
@@ -39,9 +37,7 @@ function Index() {
       <Pain />
       <MaterialInside />
       <Toolbox />
-      <Inside />
       <Mechanism />
-      <Transform />
       <ForWho />
       <Feedbacks />
       <Offer />
