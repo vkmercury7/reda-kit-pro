@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 
 import { Hero } from "@/components/kit/Hero";
 import { Pain } from "@/components/kit/Pain";
+import { MaterialInside } from "@/components/kit/MaterialInside";
 import { Toolbox } from "@/components/kit/Toolbox";
 import { Inside } from "@/components/kit/Inside";
 import { Mechanism } from "@/components/kit/Mechanism";
