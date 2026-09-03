@@ -1,19 +1,18 @@
 import { MessageSquare } from "lucide-react";
 import { Section, Eyebrow } from "./ui";
 import { SnapCarousel } from "./SnapCarousel";
-import feedback01 from "@/assets/feedback-01.jpg.asset.json";
-import feedback02 from "@/assets/feedback-02.jpg.asset.json";
 
 /**
  * Prints reais de feedback dos estudantes.
  * O print é exibido inteiro (object-contain), sem cortes.
+ * Arquivos servidos de /public para funcionar em qualquer host (Netlify incluso).
  */
-const feedbacks: { label: string; src?: string }[] = [
-  { label: "Feedback 01", src: feedback01.url },
-  { label: "Feedback 02", src: feedback02.url },
+const feedbacks: { label: string; src?: string; width?: number; height?: number }[] = [
+  { label: "Feedback 01", src: "/images/feedbacks/feedback-01.jpg", width: 1170, height: 652 },
+  { label: "Feedback 02", src: "/images/feedbacks/feedback-02.jpg", width: 1170, height: 1128 },
 ];
 
-function Slot({ label, src }: { label: string; src?: string }) {
+function Slot({ label, src, width, height }: { label: string; src?: string; width?: number; height?: number }) {
   if (src) {
     return (
       <a
