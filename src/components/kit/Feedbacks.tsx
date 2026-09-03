@@ -24,6 +24,8 @@ function Slot({ label, src, width, height }: { label: string; src?: string; widt
         <img
           src={src}
           alt={label}
+          width={width}
+          height={height}
           loading="lazy"
           className="mx-auto max-h-[420px] w-full rounded-xl object-contain"
         />
