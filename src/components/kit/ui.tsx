@@ -14,7 +14,7 @@ export function Cta({
 }) {
   return (
     <a
-      href="https://pay.kirvano.com/df102b63-3564-4381-80d5-30e2ecf7eb6c"
+      href="https://hub.usepinpay.com/pay/b4d93388-1f7a-45c6-bd39-d27696f85a5a"
       onClick={trackInitiateCheckout}
       className={cn(
         "group inline-flex w-full items-center justify-center gap-2 rounded-xl bg-brand text-center font-display font-bold tracking-tight text-primary-foreground shadow-[var(--shadow-lift)] transition-all duration-200 hover:-translate-y-0.5 hover:brightness-110 active:translate-y-0 sm:w-auto",
